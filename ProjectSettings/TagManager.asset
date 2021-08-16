@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - gasnica
+  - ogien
+  - gasnica2
+  - cos
+  - waz
+  - LvL2
+  - LvL1
+  - hydrant
+  - dysza
+  - ogien2
+  - Bariera
+  - btnHome
+  - btnHome2
+  - btnEq
+  - gasnicaP
+  - elektryka
+  - LvL3
+  - gasnica3
+  - waz2
+  - hydrant2
+  - LvL4
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

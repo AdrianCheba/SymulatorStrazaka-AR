@@ -1,0 +1,60 @@
+# WaveFront OBJ - Mtl file exported by LightRay3D
+# tlf16_rund.mtl
+# Num Materials: 8
+
+newmtl reifen
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\reifen.tga
+
+newmtl kf
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\kotfluegel_tlf_rund.jpg
+
+newmtl alu
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\alu_tlf.jpg
+
+newmtl tank
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\tank_tlf.jpg
+
+newmtl kaba
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\kabine_tlf_rund.jpg
+
+newmtl detail
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\details_tlf_rund.tga
+
+newmtl geraete
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\geraete.tga
+
+newmtl fahrwerk
+Ka 0.501961 0.501961 0.501961
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 781.250000
+map_Kd G:\spiele\mohaa\model_entwurf\cubus_simple_ffw\cubus_ffw\Opelgreen.tga
+
