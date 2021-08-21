@@ -10,10 +10,15 @@ public class Menu : MonoBehaviour
     public Canvas LvLMenu;
     public Canvas eq;
     public Canvas BtnEQ;
+    public Canvas LvL4Menu;
+    public Canvas Wlasne;
     public GameObject LvL1;
     public GameObject LvL2;
     public GameObject LvL3;
     public GameObject LvL4;
+    public GameObject LvL4E;
+    public GameObject LvL4M;
+    public GameObject LvL4H;
     public GameObject cos;
     Vector3 cosPos;
     public Text poziomU;
@@ -21,6 +26,7 @@ public class Menu : MonoBehaviour
     public int flagaLvL1 = 0;
     public int flagaLvL2 = 0;
     public int flagaLvL3 = 0;
+    public int flagaLvL4 = 0;
 
     public GameObject dysza;
     Vector3 dyszaPos;
@@ -41,21 +47,36 @@ public class Menu : MonoBehaviour
         LvLMenu = LvLMenu.GetComponent<Canvas>();
         eq = eq.GetComponent<Canvas>();
         BtnEQ = BtnEQ.GetComponent<Canvas>();
-       
+        LvL4Menu = LvL4Menu.GetComponent<Canvas>();
+        Wlasne = Wlasne.GetComponent<Canvas>();
+
+
         Time.timeScale = 0;
 
         LvLMenu.enabled = false;
         eq.enabled = false;
         BtnEQ.enabled = false;
+        LvL4Menu.enabled = false;
+        Wlasne.enabled = false;
 
         LvL1 = GameObject.FindGameObjectWithTag("LvL1");
+        LvL1.SetActive(false);
 
         LvL2 = GameObject.FindGameObjectWithTag("LvL2");
         LvL2.SetActive(false); 
         
         LvL3 = GameObject.FindGameObjectWithTag("LvL3");
         LvL3.SetActive(false);
+
+        LvL4E = GameObject.FindGameObjectWithTag("LvL4E");
+        LvL4E.SetActive(false);
         
+        LvL4M = GameObject.FindGameObjectWithTag("LvL4M");
+        LvL4M.SetActive(false); 
+        
+        LvL4H = GameObject.FindGameObjectWithTag("LvL4H");
+        LvL4H.SetActive(false);
+
         LvL4 = GameObject.FindGameObjectWithTag("LvL4");
         LvL4.SetActive(false);
 
@@ -97,9 +118,6 @@ public class Menu : MonoBehaviour
         LvLMenu.enabled = false;
         BtnEQ.enabled = true; 
         LvL1.SetActive(isActiveAndEnabled);
-        LvL2.SetActive(false);
-        LvL3.SetActive(false);
-        LvL4.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -107,9 +125,6 @@ public class Menu : MonoBehaviour
     {
         LvLMenu.enabled = false;
         BtnEQ.enabled = true;
-        LvL1.SetActive(false);
-        LvL3.SetActive(false);
-        LvL4.SetActive(false);
         LvL2.SetActive(isActiveAndEnabled);
 
         Time.timeScale = 1;
@@ -120,9 +135,6 @@ public class Menu : MonoBehaviour
     {
         LvLMenu.enabled = false;
         BtnEQ.enabled = true;
-        LvL1.SetActive(false);
-        LvL2.SetActive(false);
-        LvL4.SetActive(false);
         LvL3.SetActive(isActiveAndEnabled);
 
         Time.timeScale = 1;
@@ -132,15 +144,43 @@ public class Menu : MonoBehaviour
     public void btnLvL4()
     {
         LvLMenu.enabled = false;
+        LvL4Menu.enabled = true;
+        
+    } 
+    
+    public void btnLvL4E()
+    {
+        LvL4Menu.enabled = false;
         BtnEQ.enabled = true;
-        LvL1.SetActive(false);
-        LvL2.SetActive(false);
-        LvL3.SetActive(false);
         LvL4.SetActive(isActiveAndEnabled);
+        LvL4E.SetActive(isActiveAndEnabled);
+
+        Time.timeScale = 1;
+
+    }    
+
+    public void btnLvL4M()
+    {
+        LvL4Menu.enabled = false;
+        BtnEQ.enabled = true;
+        LvL4.SetActive(isActiveAndEnabled);
+        LvL4M.SetActive(isActiveAndEnabled);
 
         Time.timeScale = 1;
 
     }
+
+    public void btnLvL4H()
+    {
+        LvL4Menu.enabled = false;
+        BtnEQ.enabled = true;
+        LvL4.SetActive(isActiveAndEnabled);
+        LvL4H.SetActive(isActiveAndEnabled);
+
+        Time.timeScale = 1;
+
+    }   
+    
 
     public void btnEq()
     {

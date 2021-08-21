@@ -25,6 +25,9 @@ TagManager:
   - waz2
   - hydrant2
   - LvL4
+  - LvL4E
+  - LvL4M
+  - LvL4H
   layers:
   - Default
   - TransparentFX
