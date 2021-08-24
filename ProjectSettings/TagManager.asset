@@ -28,6 +28,9 @@ TagManager:
   - LvL4E
   - LvL4M
   - LvL4H
+  - OgienLvL4
+  - Timer
+  - gaP
   layers:
   - Default
   - TransparentFX

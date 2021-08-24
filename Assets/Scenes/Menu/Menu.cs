@@ -19,8 +19,11 @@ public class Menu : MonoBehaviour
     public GameObject LvL4E;
     public GameObject LvL4M;
     public GameObject LvL4H;
+    public GameObject[]ogienLvL4;
     public GameObject cos;
+    public GameObject gaP;
     Vector3 cosPos;
+    Vector3 gaPPos;
     public Text poziomU;
 
     public int flagaLvL1 = 0;
@@ -34,8 +37,11 @@ public class Menu : MonoBehaviour
     public float range = 1000f;
 
     public Image stanGasnicy;
+    public Image stanGasnicy2;
     public float iloscPiany = 5f;
+    public float iloscPiany2 = 5f;
     public float czasGaszenia;
+    public float czasGaszenia2;
 
     public GameObject btHome;
     public GameObject btHome2;
@@ -49,6 +55,7 @@ public class Menu : MonoBehaviour
         BtnEQ = BtnEQ.GetComponent<Canvas>();
         LvL4Menu = LvL4Menu.GetComponent<Canvas>();
         Wlasne = Wlasne.GetComponent<Canvas>();
+
 
 
         Time.timeScale = 0;
@@ -77,13 +84,20 @@ public class Menu : MonoBehaviour
         LvL4H = GameObject.FindGameObjectWithTag("LvL4H");
         LvL4H.SetActive(false);
 
+        ogienLvL4 = GameObject.FindGameObjectsWithTag("OgienLvL4");
+
         LvL4 = GameObject.FindGameObjectWithTag("LvL4");
         LvL4.SetActive(false);
 
         cos = GameObject.FindGameObjectWithTag("cos");
         cosPos = cos.transform.position;
         cos.transform.position = new Vector3(cosPos.x + 0.043f, cosPos.y - 0.042f, cosPos.z + 0.11f);
-        cos.SetActive(false);
+        cos.SetActive(false); 
+        
+        gaP = GameObject.FindGameObjectWithTag("gaP");
+        gaPPos = gaP.transform.position;
+        gaP.transform.position = new Vector3(gaPPos.x + 0.043f, gaPPos.y - 0.042f, gaPPos.z + 0.11f);
+        gaP.SetActive(false);
 
         dysza = GameObject.FindGameObjectWithTag("dysza");
         dyszaPos = dysza.transform.position;
@@ -95,8 +109,12 @@ public class Menu : MonoBehaviour
 
         stanGasnicy = stanGasnicy.GetComponent<Image>();
         stanGasnicy.enabled = false;
+        
+        stanGasnicy2 = stanGasnicy2.GetComponent<Image>();
+        stanGasnicy2.enabled = false;
 
         czasGaszenia = iloscPiany;
+        czasGaszenia2 = iloscPiany2;
 
         btHome = GameObject.FindGameObjectWithTag("btnHome");
         btHome.SetActive(false);
@@ -153,7 +171,11 @@ public class Menu : MonoBehaviour
         LvL4Menu.enabled = false;
         BtnEQ.enabled = true;
         LvL4.SetActive(isActiveAndEnabled);
-        LvL4E.SetActive(isActiveAndEnabled);
+        LvL4E.SetActive(isActiveAndEnabled); 
+        ogienLvL4[1].SetActive(isActiveAndEnabled);
+        ogienLvL4[3].SetActive(isActiveAndEnabled);
+        ogienLvL4[4].SetActive(isActiveAndEnabled);
+        ogienLvL4[5].SetActive(isActiveAndEnabled);
 
         Time.timeScale = 1;
 
@@ -165,7 +187,15 @@ public class Menu : MonoBehaviour
         BtnEQ.enabled = true;
         LvL4.SetActive(isActiveAndEnabled);
         LvL4M.SetActive(isActiveAndEnabled);
-
+        ogienLvL4[0].SetActive(isActiveAndEnabled);
+        ogienLvL4[1].SetActive(isActiveAndEnabled);
+        ogienLvL4[2].SetActive(isActiveAndEnabled);
+        ogienLvL4[3].SetActive(isActiveAndEnabled);
+        ogienLvL4[4].SetActive(isActiveAndEnabled);
+        ogienLvL4[5].SetActive(isActiveAndEnabled);
+        ogienLvL4[6].SetActive(isActiveAndEnabled);
+        ogienLvL4[8].SetActive(isActiveAndEnabled);
+        ogienLvL4[10].SetActive(isActiveAndEnabled);
         Time.timeScale = 1;
 
     }
@@ -176,7 +206,17 @@ public class Menu : MonoBehaviour
         BtnEQ.enabled = true;
         LvL4.SetActive(isActiveAndEnabled);
         LvL4H.SetActive(isActiveAndEnabled);
-
+        ogienLvL4[0].SetActive(isActiveAndEnabled);
+        ogienLvL4[1].SetActive(isActiveAndEnabled);
+        ogienLvL4[2].SetActive(isActiveAndEnabled);
+        ogienLvL4[3].SetActive(isActiveAndEnabled);
+        ogienLvL4[4].SetActive(isActiveAndEnabled);
+        ogienLvL4[5].SetActive(isActiveAndEnabled);
+        ogienLvL4[6].SetActive(isActiveAndEnabled);
+        ogienLvL4[7].SetActive(isActiveAndEnabled);
+        ogienLvL4[8].SetActive(isActiveAndEnabled);
+        ogienLvL4[9].SetActive(isActiveAndEnabled);
+        ogienLvL4[10].SetActive(isActiveAndEnabled);
         Time.timeScale = 1;
 
     }   
@@ -206,11 +246,26 @@ public class Menu : MonoBehaviour
             range = 900f;
             stanGasnicy.enabled = true;
         }
+    }    
+    
+    public void btnGasnicaP()
+    {
+        if (flagaLvL1 == 2 || flagaLvL2 == 3 || flagaLvL3 == 5)
+        {
+            gaP.SetActive(isActiveAndEnabled);
+            dysza.SetActive(false);
+            cos.SetActive(false);
+            eq.enabled = false;
+            flagaLvL1 = 3;
+            flagaLvL2 = 4;
+            range = 900f;
+            stanGasnicy2.enabled = true;
+        }
     }
 
     public void btnWaz()
     {
-        if (flagaLvL2 == 4)
+        if (flagaLvL2 == 4 || flagaLvL4 == 0)
         {
             dysza.SetActive(true);
             cos.SetActive(false);
@@ -231,6 +286,19 @@ public class Menu : MonoBehaviour
         if(iloscPiany != null)
         {
             stanGasnicy.fillAmount = czasGaszenia / iloscPiany;
+        }
+    }   
+    
+    public void aktualizacjaPaskaPiany2()
+    {
+        if (czasGaszenia2 > -0.5f)
+        {
+            czasGaszenia2 -= Time.deltaTime;
+        }
+
+        if(iloscPiany2 != null)
+        {
+            stanGasnicy2.fillAmount = czasGaszenia2 / iloscPiany2;
         }
     }
 
