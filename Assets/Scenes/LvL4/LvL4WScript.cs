@@ -18,6 +18,12 @@ public class LvL4WScript : MonoBehaviour
     public float czasM;
     public float czasS;
 
+    public Text czasTxt;
+    public Text mocP;
+    public Text IPZ;
+    public Text ISG;
+
+    public float lczas;
     
 
 
@@ -30,17 +36,24 @@ public class LvL4WScript : MonoBehaviour
         timerTxt = timerTxt.GetComponent<Text>();
         timerTxt.enabled = false;
         l4S = l4S.GetComponent<LvL4Script>();
-        objM.ogienLvL4[0].SetActive(false);
-        objM.ogienLvL4[1].SetActive(false);
-        objM.ogienLvL4[2].SetActive(false);
-        objM.ogienLvL4[3].SetActive(false);
-        objM.ogienLvL4[4].SetActive(false);
-        objM.ogienLvL4[5].SetActive(false);
-        objM.ogienLvL4[6].SetActive(false);
-        objM.ogienLvL4[7].SetActive(false);
-        objM.ogienLvL4[8].SetActive(false);
-        objM.ogienLvL4[9].SetActive(false);
-        objM.ogienLvL4[10].SetActive(false);
+        objM.ogienLvL4.SetActive(false);
+        objM.ogienLvL42.SetActive(false);
+        objM.ogienLvL43.SetActive(false);
+        objM.ogienLvL44.SetActive(false);
+        objM.ogienLvL45.SetActive(false);
+        objM.ogienLvL46.SetActive(false);
+        objM.ogienLvL47.SetActive(false);
+        objM.ogienLvL48.SetActive(false);
+        objM.ogienLvL49.SetActive(false);
+        objM.ogienLvL410.SetActive(false);
+        objM.ogienLvL411.SetActive(false);
+
+        czasTxt = czasTxt.GetComponent<Text>();
+        mocP = mocP.GetComponent<Text>();
+        IPZ = IPZ.GetComponent<Text>();
+        ISG = ISG.GetComponent<Text>();
+
+       
     }
 
   
@@ -56,6 +69,11 @@ public class LvL4WScript : MonoBehaviour
                 timerTxt.text = "" + (int)czasM + " : " + (int)czasS;
             }
         }
+
+        czasTxt.text = "" + (int)czas + " s";
+        mocP.text = "" + (int)rozmiarP;
+        IPZ.text = "" + (int)iloscZ;
+        ISG.text = "" + (int)srodkiG;
     }
 
     public void btnWlasne()
@@ -73,103 +91,103 @@ public class LvL4WScript : MonoBehaviour
         objM.LvL4H.SetActive(isActiveAndEnabled);
 
         if ((int)iloscZ == 1)
-        { 
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled); 
+        {
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 2)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
         } 
         else if ((int)iloscZ == 3)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
         }   
         else if ((int)iloscZ == 4)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
         }    
         else if ((int)iloscZ == 5)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
         }   
         else if ((int)iloscZ == 6)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
         }   
         else if ((int)iloscZ == 7)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
         }      
         else if ((int)iloscZ == 8)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
         }       
         else if ((int)iloscZ == 9)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[8].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
+            objM.ogienLvL49.SetActive(isActiveAndEnabled);
         }   
         else if ((int)iloscZ == 10)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[8].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[9].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
+            objM.ogienLvL49.SetActive(isActiveAndEnabled);
+            objM.ogienLvL410.SetActive(isActiveAndEnabled);
         }     
         else if ((int)iloscZ == 11)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[8].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[9].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[10].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
+            objM.ogienLvL49.SetActive(isActiveAndEnabled);
+            objM.ogienLvL410.SetActive(isActiveAndEnabled);
+            objM.ogienLvL411.SetActive(isActiveAndEnabled);
         }
 
 
@@ -187,9 +205,16 @@ public class LvL4WScript : MonoBehaviour
 
 
         objM.iloscPiany = srodkiG;
+        objM.iloscPiany2 = srodkiG;
+
+        l4S.btnGP.gameObject.SetActive(false);
+        l4S.btnW.gameObject.SetActive(false);
+        l4S.btnGZ.gameObject.SetActive(false);
 
         timerTxt.enabled = true;
         Time.timeScale = 1;
+
+        lczas = czas;
 
     }
 
@@ -207,102 +232,102 @@ public class LvL4WScript : MonoBehaviour
 
         if ((int)iloscZ == 1)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 2)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 3)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 4)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 5)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 6)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 7)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 8)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 9)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[8].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
+            objM.ogienLvL49.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 10)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[8].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[9].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
+            objM.ogienLvL49.SetActive(isActiveAndEnabled);
+            objM.ogienLvL410.SetActive(isActiveAndEnabled);
         }
         else if ((int)iloscZ == 11)
         {
-            objM.ogienLvL4[0].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[1].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[2].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[3].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[4].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[5].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[6].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[7].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[8].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[9].SetActive(isActiveAndEnabled);
-            objM.ogienLvL4[10].SetActive(isActiveAndEnabled);
+            objM.ogienLvL4.SetActive(isActiveAndEnabled);
+            objM.ogienLvL42.SetActive(isActiveAndEnabled);
+            objM.ogienLvL43.SetActive(isActiveAndEnabled);
+            objM.ogienLvL44.SetActive(isActiveAndEnabled);
+            objM.ogienLvL45.SetActive(isActiveAndEnabled);
+            objM.ogienLvL46.SetActive(isActiveAndEnabled);
+            objM.ogienLvL47.SetActive(isActiveAndEnabled);
+            objM.ogienLvL48.SetActive(isActiveAndEnabled);
+            objM.ogienLvL49.SetActive(isActiveAndEnabled);
+            objM.ogienLvL410.SetActive(isActiveAndEnabled);
+            objM.ogienLvL411.SetActive(isActiveAndEnabled);
         }
 
 
@@ -320,9 +345,15 @@ public class LvL4WScript : MonoBehaviour
 
 
         objM.iloscPiany = Random.Range(5, 16);
+        objM.iloscPiany2 = Random.Range(5, 16);
+
+        l4S.btnGP.gameObject.SetActive(false);
+        l4S.btnW.gameObject.SetActive(false);
+        l4S.btnGZ.gameObject.SetActive(false);
 
         timerTxt.enabled = true;
         Time.timeScale = 1;
+        lczas = czas;
     }
 
     public void NowyCzas(float nowyCzas)

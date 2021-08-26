@@ -31,6 +31,7 @@ TagManager:
   - OgienLvL4
   - Timer
   - gaP
+  - gaPLvL3
   layers:
   - Default
   - TransparentFX

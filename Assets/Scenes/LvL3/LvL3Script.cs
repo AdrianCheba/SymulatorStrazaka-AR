@@ -31,7 +31,7 @@ public class LvL3Script : MonoBehaviour
         txt2.enabled = false;
         menu = menu.GetComponent<Menu>();
         gasnica = GameObject.FindGameObjectWithTag("gasnica3");
-        gasnicaP = GameObject.FindGameObjectWithTag("gasnicaP");
+        gasnicaP = GameObject.FindGameObjectWithTag("gaPLvL3");
     }
 
    
@@ -55,7 +55,7 @@ public class LvL3Script : MonoBehaviour
 
 
                     case "hydrant2":
-                            waz.transform.localPosition = new Vector3(-5f, 0.01f, -0.5f);
+                            waz.transform.localPosition = new Vector3(0, 0, 0);
 
                         break;
                         
@@ -66,9 +66,9 @@ public class LvL3Script : MonoBehaviour
                             {
                                  if (menu.czasGaszenia >= -0.5)
                                  {
-                                    ogien.startSize -= 0.007f;
+                                    ogien.startSize -= 0.07f;
                                     woda.Play(true);
-                                    menu.aktualizacjaPaskaPiany();
+                                    menu.aktualizacjaPaskaPiany2();
 
                                     if (ogien.startSize <= 0)
                                     {
@@ -92,7 +92,7 @@ public class LvL3Script : MonoBehaviour
                         gasnica.transform.position = new Vector3(100, 100, 100);
                         break;
                     
-                    case "gasnicaP":
+                    case "gaPLvL3":
                         menu.flagaLvL3 = 5;
                         gasnicaP.transform.position = new Vector3(100, 100, 100);
                         break;
